@@ -14,6 +14,13 @@ public class OperationsExtra {
 		}
 		return "";
 	}
+	
+	protected String sinal(Double n) {
+		if (n > 0) {
+			return " + ";
+		}
+		return "";
+	}
 
 	protected void startStruct() {
 		index = 0;

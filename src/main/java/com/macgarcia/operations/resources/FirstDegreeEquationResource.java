@@ -9,18 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.macgarcia.operations.core.CoreCalculatorFirstDegreeEquation;
-import com.macgarcia.operations.core.CoreCalculatorFirstDegreeEquationWithFraction;
 import com.macgarcia.operations.dto.in.FirstDegreeEquationDtoIn;
 
 @RestController
-@RequestMapping("/equations")
-public class EquationResource {
+@RequestMapping("/firstDegreeEquations")
+public class FirstDegreeEquationResource {
 
 	@Autowired
-	CoreCalculatorFirstDegreeEquation coreCalculatorFirstDegreeEquation;
+	private CoreCalculatorFirstDegreeEquation coreCalculatorFirstDegreeEquation;
 
-	@Autowired
-	CoreCalculatorFirstDegreeEquationWithFraction coreCalculatorFirstDegreeEquationWithFraction;
+//	@Autowired
+//	CoreCalculatorFirstDegreeEquationWithFraction coreCalculatorFirstDegreeEquationWithFraction;
 
 	@GetMapping(path = "/firstDegreeEquation", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> firstDegreeEquation(@RequestParam final Integer a, @RequestParam final Integer b,
